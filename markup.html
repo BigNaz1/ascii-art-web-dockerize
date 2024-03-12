@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style> 
+    body{
+        text-align: center;
+        background-color: #a85561;
+        font-family: Verdana;
+    }
+    .selections{
+        position:relative ; 
+        /* left: 15px; */
+         /* padding-left:200px; */
+        right: -200px;
+        bottom: 96px;
+        display:inline-block;
+    } 
+    #entertext{
+    padding-right: 92px;
+    }
+    textarea[name="inputcontent"]{
+        resize: none;
+    }
+    .inputmarkup{
+        padding-right: 200px;
+        position: relative;
+        top: 11%
+    }
+    h1{
+        color: #38364f  ;
+    }
+    
+    .colordev{
+        padding-top:5px;
+        padding-right:2px;
+    }
+    #color{
+        width:60px;
+    }
+    button[name="submit"]{
+        position:relative;
+        right:100px;
+        top:93%;
+   }
+</style>
+<body>
+    <h1>ASCII Art</h1>
+    <form action="/" method="post">
+
+    <div class="inputmarkup">
+    <text id="entertext">Enter Text:</text> <br>
+    <textarea name="inputcontent" placeholder="Write here.."></textarea>
+    </div>
+
+    <br> <br>
+    <div class="selections">
+    <label for="fonts">Select font</label>
+    <select name="fonts">
+        <option value="standard">Standard</option>
+        <option value="shadow">Shadow</option>
+        <option value="thinkertoy">Thinkertoy</option>
+        <option value="3d">3D</option>
+    </select>
+    <div class="colordev">
+    <label for="color">Select a Color:</label>
+    <input id=color name="color" type="color"></select>
+</div>
+    <br>
+    <button type="submit" name="submit">Submit</button>
+</div>
+    <!-- <br><br><br> -->
+    <textarea disabled="true" rows="30" style="color:{{.Color}}; position:relative; top:-90px; width:100% ; resize: none;">{{ .Res }}</textarea>
+</form>
+</body>
+</html>
